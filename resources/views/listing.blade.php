@@ -8,7 +8,7 @@
 </head>
 <body>
     <h4>{{$listing['id']; }}</h4>
-    <p>{{$listing['name']; }}</p>
+    <p>{{$listing['title']; }}</p>
     <p>{{$listing['description']; }}</p>
     <p>{{$listing['location']; }}</p>
 
