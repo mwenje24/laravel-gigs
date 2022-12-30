@@ -8,9 +8,13 @@
 </head>
 <body>
     <h3>{{$heading; }}</h3><br>
+    @if(count($listing) == 0)
+    <p>No gigs to list</p>
+    @endif
+
     @foreach($listing as $listing)
-        <h4>{{$listing['id']; }}</h4>
-        <p>{{$listing['name']; }}</p>
+        {{-- <h4>{{$listing['id']; }}</h4> --}}
+        <a href="/listings/{{$listing['id']}}">{{$listing['name']; }}</a>
         <p>{{$listing['description']; }}</p>
         <p>{{$listing['location']; }}</p>
     @endforeach
