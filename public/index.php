@@ -2,6 +2,7 @@
 
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
+// require_once "../resources/css/bootstrap.css";
 
 define('LARAVEL_START', microtime(true));
 
