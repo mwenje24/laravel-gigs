@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<x-layout>
 
 <section class="py-5">
     <div class="container px-4 px-lg-5 my-5">
@@ -23,4 +21,4 @@
     </div>
 </section>
 
-@endsection
+</x-layout>

@@ -22,7 +22,8 @@
         </div>
     </nav>
     {{-- VIEW OUTPUT --}}
-    @yield('content')
+    
+    {{$slot}}
 
     <!-- Footer-->
     <footer class="py-5 bg-dark">

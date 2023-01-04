@@ -3,9 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    @extends('layout')
-
-    @section('content')
+    <x-layout>
 
     <!-- Header-->
     <header class="bg-dark py-5">
@@ -39,4 +37,5 @@
     @endforeach
     </div>
     </div>
-    @endsection
+
+</x-layout>
