@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laragigs</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
@@ -25,7 +26,7 @@
 
     <!-- Footer-->
     <footer class="py-5 bg-dark">
-        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; mwenj24 2023</p></div>
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; mwenje24 2023</p></div>
     </footer>
     <!-- Bootstrap core JS-->
     <script src="#"></script>

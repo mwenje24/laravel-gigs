@@ -1,0 +1,16 @@
+.list-group{
+    padding: 5px;
+ }
+.list-group a{
+    text-decoration: none;
+    background-color: rgb(61, 59, 59);
+    border-radius: 5px;
+    color: #fff;
+    padding:0 5px;
+    border: 1px solid rgb(61, 59, 59);
+}
+.list-group a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(61, 59, 59);
+}

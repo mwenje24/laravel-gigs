@@ -28,29 +28,14 @@
     </div>
         
 
-    <h5 class="fw-bolder mt-4 text-center">{{$heading; }}</h5><br>
+    <h5 class="fw-bolder mt-4 text-center">Gigs Listings</h5><br>
     <div class='lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4'>
     @if(count($listing) == 0)
     <p>No gigs to list</p>
     @endif
     <div class="row">
     @foreach($listing as $listing)
-        <div class="col-3 mb-3">
-            <div class="card h-100">
-                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">available</div>
-                <img class="card-img-top" src="{{ asset('images/Im7lZjxeLhg.jpg') }}" alt="..." />
-                <div class="card-body p-4">
-                    <div class="text-center">
-                        <h5 class="fw-bolder">{{$listing['title']; }}</h5>
-                        <span class="text-muted">{{$listing['tags']; }}</span><br>
-                        <span class="text-muted">Location: {{$listing['location']; }}</span>
-                    </div>
-                </div>
-                <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/listings/{{$listing['id']}}">View</a></div>
-                </div>
-            </div>
-        </div>        
+        <x-listingcard :listing="$listing" />
     @endforeach
     </div>
     </div>
