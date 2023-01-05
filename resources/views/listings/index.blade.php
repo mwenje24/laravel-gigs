@@ -17,10 +17,10 @@
 
     <!-- Navbar Search-->
     <div class="container p-4">
-        <form class="d-none d-md-inline-block form-inline w-100">
+        <form class="d-none d-md-inline-block form-inline w-100" action="/">
             <div class="input-group">
-                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for jobs..." aria-describedby="btnNavbarSearch" />
-                <button class="btn btn-secondary" id="btnNavbarSearch" type="button">search</button>
+                <input class="form-control" name="search" type="text" placeholder="Search for jobs..." aria-label="Search for jobs..." aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-secondary" id="btnNavbarSearch" type="submit">search</button>
             </div>
         </form>
     </div>
