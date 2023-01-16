@@ -1,6 +1,6 @@
 @props(['listing'])
 
-<div class="col-3 mb-3">
+<div class="col mb-3">
     <div class="card h-100">
         <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">available</div>
         <img class="card-img-top" src="{{ asset('images/Im7lZjxeLhg.jpg') }}" alt="..." />

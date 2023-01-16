@@ -31,7 +31,7 @@
     @if(count($listing) == 0)
     <p>No gigs to list</p>
     @endif
-    <div class="row">
+    <div class="row row-cols-md-4">
     @foreach($listing as $listing)
         <x-listingcard :listing="$listing" />
     @endforeach
