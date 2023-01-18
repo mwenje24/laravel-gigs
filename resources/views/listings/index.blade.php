@@ -27,15 +27,16 @@
         
 
     <h5 class="fw-bolder mt-4 text-center">Gigs Listings</h5><br>
-    <div class='lg:grid lg:grid-cols-2 gap-5 space-y-4 md:space-y-0 mx-4'>
-    @if(count($listing) == 0)
-    <p>No gigs to list</p>
-    @endif
-    <div class="row row-cols-md-4">
-    @foreach($listing as $listing)
-        <x-listingcard :listing="$listing" />
-    @endforeach
+    <div class='mx-4'>
+        @if(count($listing) == 0)
+        <p>No gigs to list</p>
+        @endif
+        <div class="row row-cols-md-4">
+        @foreach($listing as $listing)
+            <x-listingcard :listing="$listing" />
+        @endforeach
+        </div>
     </div>
-    </div>
+    <div class="mt-3 p-4">{{$listing->links()}}</div>
 
 </x-layout>

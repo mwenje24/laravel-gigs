@@ -10,42 +10,42 @@
                     {{-- <div class="msg"></div> --}}
                     <div>
                         <label class="form-label">Company Name :</label>
-                        <input class="form-control" type="text" name="company">
+                        <input class="form-control" type="text" name="company" value="{{old('company')}}">
                         @error('company')
                             <p class="text-danger mt-1">{{$message}}</p>
                         @enderror
                     </div>
                     <div>
                         <label class="form-label">Job Title :</label>
-                        <input class="form-control" placeholder="Example: Senior React Developer etc" type="text" name="title">
+                        <input class="form-control" placeholder="Example: Senior React Developer etc" type="text" name="title" value="{{old('title')}}">
                         @error('title')
                             <p class="text-danger mt-1">{{$message}}</p>
                         @enderror
                     </div>
                     <div>
                         <label class="form-label">Job Location :</label>
-                        <input class="form-control" placeholder="Example: Remote, Boston MA etc" type="text" name="location">
+                        <input class="form-control" placeholder="Example: Remote, Boston MA etc" type="text" name="location" value="{{old('location')}}">
                         @error('location')
                             <p class="text-danger mt-1">{{$message}}</p>
                         @enderror
                     </div>
                     <div>
                         <label class="form-label">Contact Email :</label>
-                        <input class="form-control" type="text" name="email">
+                        <input class="form-control" type="text" name="email" value="{{old('email')}}">
                         @error('email')
                             <p class="text-danger mt-1">{{$message}}</p>
                         @enderror
                     </div>
                     <div>
                         <label class="form-label">Website/Application URL :</label>
-                        <input class="form-control" type="text" name="website">
+                        <input class="form-control" type="text" name="website" value="{{old('website')}}">
                         @error('website')
                             <p class="text-danger mt-1">{{$message}}</p>
                         @enderror
                     </div>
                     <div>
                         <label class="form-label">Tags(Comma Separated) :</label>
-                        <input class="form-control" placeholder="Example: Backend, Laravel etc" type="text" name="tags">
+                        <input class="form-control" placeholder="Example: Backend, Laravel etc" type="text" name="tags" value="{{old('tags')}}">
                         @error('tags')
                             <p class="text-danger mt-1">{{$message}}</p>
                         @enderror
@@ -56,7 +56,7 @@
                     </div> --}}
                     <div>
                         <label class="form-label">Job Description :</label>
-                        <textarea class="form-control" rows="3" placeholder="Include tasks, requirements, salary etc" type="text" name="description"></textarea>
+                        <textarea class="form-control" rows="3" placeholder="Include tasks, requirements, salary etc" type="text" name="description">{{old('description')}}</textarea>
                         @error('description')
                             <p class="text-danger mt-1">{{$message}}</p>
                         @enderror
