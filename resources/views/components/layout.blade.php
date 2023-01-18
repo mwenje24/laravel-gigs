@@ -11,6 +11,7 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
+    <x-flash-message />
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand fs-2 fw-bolder" href="/"><span class="text-secondary">L</span>G</a>
@@ -31,6 +32,5 @@
     <footer class="py-5 bg-dark">
         <div class="container"><p class="m-0 text-center text-white">Copyright &copy; mwenje24 2023</p></div>
     </footer>
-    <x-flash-message />
 </body>
 </html>
