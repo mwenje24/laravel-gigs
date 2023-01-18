@@ -27,7 +27,7 @@
         
 
     <h5 class="fw-bolder mt-4 text-center">Gigs Listings</h5><br>
-    <div class='lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4'>
+    <div class='lg:grid lg:grid-cols-2 gap-5 space-y-4 md:space-y-0 mx-4'>
     @if(count($listing) == 0)
     <p>No gigs to list</p>
     @endif
