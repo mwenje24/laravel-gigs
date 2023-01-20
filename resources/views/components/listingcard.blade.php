@@ -3,7 +3,7 @@
 <div class="col mb-3">
     <div class="card h-100">
         <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">available</div>
-        <img class="card-img-top" src="{{ asset('images/Im7lZjxeLhg.jpg') }}" alt="..." />
+        <img class="card-img-top" src="{{ $listing->logo ? asset('storage/'.$listing->logo) : asset('images/Im7lZjxeLhg.jpg')}}" alt="..." />
         <div class="card-body p-4">
             <div class="text-center">
                 <h5 class="fw-bolder">{{$listing->title; }}</h5>

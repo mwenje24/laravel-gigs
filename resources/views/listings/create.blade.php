@@ -5,7 +5,7 @@
                 <div class="w-100">
                     <h1 class="fs-6 fw-bold">Create a Gig</h1>
                 </div>
-                <form id="my-form" method="POST" action="/listings">
+                <form id="my-form" method="POST" action="/listings" enctype="multipart/form-data">
                     @csrf
                     {{-- <div class="msg"></div> --}}
                     <div>
@@ -50,10 +50,13 @@
                             <p class="text-danger mt-1">{{$message}}</p>
                         @enderror
                     </div>
-                    {{-- <div>
+                    <div>
                         <label class="form-label">Company Logo :</label>
-                        <input class="form-control" type="file" name="company-logo">
-                    </div> --}}
+                        <input class="form-control" type="file" name="logo" value="{{old('logo')}}">
+                        @error('logo')
+                            <p class="text-danger mt-1">{{$message}}</p>
+                        @enderror
+                    </div>
                     <div>
                         <label class="form-label">Job Description :</label>
                         <textarea class="form-control" rows="3" placeholder="Include tasks, requirements, salary etc" type="text" name="description">{{old('description')}}</textarea>
