@@ -58,7 +58,7 @@
                                 <img class="card-img-top" src="{{ $listing->logo ? asset('storage/'.$listing->logo) : asset('images/Im7lZjxeLhg.jpg')}}" alt="..." />
                             </div>
                             <div class="col-10">
-                                <input class="form-control" type="file" name="logo" value="{{$listing->logo}}">
+                                <input class="form-control" type="file" name="logo">
                             </div>
                             
                         </div>
@@ -74,7 +74,7 @@
                         @enderror
                     </div>
                     <div class="mt-3">
-                        <input class="form-control btn btn-sm btn-dark" type="submit" value="Create Gig">
+                        <input class="form-control btn btn-sm btn-warning" type="submit" value="Update Gig">
                     </div>
                 </form>
             </div>

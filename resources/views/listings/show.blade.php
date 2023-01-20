@@ -12,10 +12,15 @@
                 <div class="fs-6 mb-5">
                     <span class="">Location : {{ $listing->location; }}</span>
                 </div>
-                <div class="d-flex">
-                    <a class="btn btn-sm btn-outline-dark flex-shrink-0 mx-2" type="button" href="mailto:{{ $listing->email }}">Mail Employer</a>
-                    <a class="btn btn-sm btn-outline-dark flex-shrink-0 mx-2" type="button" href="{{ $listing->website }}">Visit Website</a>
-                    <a class="btn btn-sm btn-outline-dark flex-shrink-0 mx-2" type="button" href="/listings/{{$listing->id}}/edit">Edit Job</a>
+                <div class="d-flex flex-wrap">
+                    <a class="btn btn-sm btn-outline-dark flex-shrink-0 mx-2 mb-2" type="button" href="{{ $listing->website }}">Visit Website</a>
+                    <a class="btn btn-sm btn-outline-dark flex-shrink-0 mx-2 mb-2" type="button" href="mailto:{{ $listing->email }}">Mail Employer</a>
+                    <a class="btn btn-sm btn-outline-dark flex-shrink-0 mx-2 mb-2" type="button" href="/listings/{{$listing->id}}/edit">Edit Job</a>
+                    <form method="POST" action="/listings/{{$listing->id}}" class="mx-2 mb-2">
+                        @csrf
+                        @method('DELETE')
+                        <input class="btn btn-sm btn-outline-danger" type="submit" value="Delete"/>
+                    </form>
                 </div>
             </div>
         </div>
