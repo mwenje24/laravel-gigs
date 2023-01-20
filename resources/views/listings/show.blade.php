@@ -15,6 +15,7 @@
                 <div class="d-flex">
                     <a class="btn btn-sm btn-outline-dark flex-shrink-0 mx-2" type="button" href="mailto:{{ $listing->email }}">Mail Employer</a>
                     <a class="btn btn-sm btn-outline-dark flex-shrink-0 mx-2" type="button" href="{{ $listing->website }}">Visit Website</a>
+                    <a class="btn btn-sm btn-outline-dark flex-shrink-0 mx-2" type="button" href="/listings/{{$listing->id}}/edit">Edit Job</a>
                 </div>
             </div>
         </div>
