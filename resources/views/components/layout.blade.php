@@ -8,6 +8,7 @@
     <title>Laragigs</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
@@ -17,8 +18,19 @@
             <a class="navbar-brand fs-2 fw-bolder" href="/"><span class="text-secondary">L</span>G</a>
             <div class="">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4 justify-content-end text-dark">
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="#!">Register</a></li>                    
-                    <li class="nav-item"><a class="nav-link" href="#!">Login</a></li>
+                    @auth
+                    <li class="nav-item"><span class="text-dark bold nav-link"><i class="fa fa-user"></i> {{auth()->user()->name}}</span></li>                    
+                    <li class="nav-item"><a class="nav-link" href="/listing/manage"><i class="fa fa-gear"></i> Manage Listings</a></li>
+                    <li class="nav-item">
+                        <form action="/logout" method="POST">
+                            @csrf
+                            <input class="nav-link btn" type="submit" value="Logout"/>
+                        </form>
+                    </li>
+                    @else
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="/register">Register</a></li>                    
+                    <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                    @endauth
                     <li class="nav-item btn btn-sm btn-outline-secondary mx-5"><a class="nav-link" aria-current="page" href="/listings/create">Post Job</a></li>
                 </ul>
             </div>
