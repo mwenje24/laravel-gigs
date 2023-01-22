@@ -10,16 +10,16 @@
       
                       <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-3 mt-3">Login</p>
       
-                      <form class="mx-0 mx-md-0" action="/users/login" method="POST">
+                      <form class="mx-0 mx-md-0" action="/users/authenticate" method="POST">
                         @csrf
       
                         <div class="d-flex flex-row align-items-center mb-3">
                           <div class="form-outline flex-fill mb-0">
                             <label class="form-label">Email</label>
                             <input type="email" name="email" class="form-control" value="{{old('email')}}"/>   
-                            @error('email')
+                            {{-- @error('email')
                                 <p class="text-danger mt-1">{{$message}}</p>
-                            @enderror                         
+                            @enderror                          --}}
                           </div>
                         </div>
       
@@ -27,11 +27,14 @@
                           <div class="form-outline flex-fill mb-0">
                             <label class="form-label">Password</label>
                             <input type="password" name="password" class="form-control" value="{{old('password')}}"/>  
-                            @error('password')
+                            {{-- @error('password')
                                 <p class="text-danger mt-1">{{$message}}</p>
-                            @enderror                          
+                            @enderror                           --}}
                           </div>
                         </div>
+                        @error('email')
+                            <p class="text-danger mt-1">{{$message}}</p>
+                        @enderror 
 
                         <div class="d-flex justify-content-center mx-4 mb-2 mb-lg-4">
                             <p>Dont have an account <a class="link" href="/register">Register</a></p>
