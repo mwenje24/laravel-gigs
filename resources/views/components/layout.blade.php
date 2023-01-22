@@ -29,7 +29,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4 text-dark  justify-content-end">
                     @auth
                     <li class="nav-item"><span class="text-dark bold nav-link"><i class="fa fa-user"></i> {{auth()->user()->name}}</span></li>                    
-                    <li class="nav-item"><a class="nav-link" href="/listing/manage"><i class="fa fa-gear"></i> Manage Listings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/listings/manage"><i class="fa fa-gear"></i> Manage Listings</a></li>
                     <li class="nav-item">
                         <form action="/logout" method="POST">
                             @csrf
