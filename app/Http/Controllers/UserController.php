@@ -30,11 +30,21 @@ class UserController extends Controller
         //Login user
         auth()->login($user);
 
-        return redirect('/')->with('message', 'user created and logedin successfully');
+        return redirect('/')->with('message', 'user created and loggedin successfully');
     }
 
     //logout
     public function logout(Request $request){
         auth()->logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        
+        return redirect('/')->with('message', 'You have loggedout successfully');
+    }
+
+    //show login form
+    public function login(){
+        return view('users.login');
     }
 }

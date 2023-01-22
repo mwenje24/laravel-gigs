@@ -15,7 +15,6 @@
                         @csrf
       
                         <div class="d-flex flex-row align-items-center mb-3">
-                          <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                           <div class="form-outline flex-fill mb-0">
                             <label class="form-label">Your Name</label>
                             <input type="text" name="name" class="form-control" value="{{old('name')}}"/> 
@@ -26,7 +25,6 @@
                         </div>
       
                         <div class="d-flex flex-row align-items-center mb-3">
-                          <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                           <div class="form-outline flex-fill mb-0">
                             <label class="form-label">Your Email</label>
                             <input type="email" name="email" class="form-control" value="{{old('email')}}"/>   
@@ -37,7 +35,6 @@
                         </div>
       
                         <div class="d-flex flex-row align-items-center mb-3">
-                          <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                           <div class="form-outline flex-fill mb-0">
                             <label class="form-label">Password</label>
                             <input type="password" name="password" class="form-control" value="{{old('password')}}"/>  
@@ -48,7 +45,6 @@
                         </div>
       
                         <div class="d-flex flex-row align-items-center mb-3">
-                          <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                           <div class="form-outline flex-fill mb-0">
                             <label class="form-label">Repeat your password</label>
                             <input type="password" name="password_confirmation" class="form-control" value="{{old('password_confirmation')}}"/>  
