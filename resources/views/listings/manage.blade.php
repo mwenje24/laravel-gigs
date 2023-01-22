@@ -1,11 +1,10 @@
 <x-layout>
-
+    <div class="container">
     <table class="table">
         <thead>
           <tr>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Job Title</th>
+            <th colspan="2">actions</th>
           </tr>
         </thead>
         <tbody>
@@ -32,5 +31,5 @@
           @endunless
         </tbody>
       </table>
-
+    </div>
 </x-layout>
